@@ -2,7 +2,7 @@ loginsrv-minimal
 ===
 
 
-# Usage
+### Usage
 
 - GitHub OAuth setting
   - Homepage URL: http://localhost
