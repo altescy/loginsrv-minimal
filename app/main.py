@@ -3,7 +3,7 @@ import argparse
 import json
 import jwt
 import os
-from flask import Flask, abort, request
+from flask import Flask, redirect, request
 
 
 JWT_ALGO = os.environ['LOGINSRV_JWT_ALGO']
@@ -21,7 +21,7 @@ def index():
             alg=JWT_ALGO,
         )
     except:
-        abort(403)
+        return redirect('http://localhost/login', code=307)
 
     return '''
         <p>hello {}.</p>
