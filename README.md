@@ -1,6 +1,7 @@
 loginsrv-minimal
 ===
 
+loginsrv: https://github.com/tarent/loginsrv
 
 ### Usage
 
