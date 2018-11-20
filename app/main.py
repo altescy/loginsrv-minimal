@@ -12,7 +12,7 @@ JWT_SECRET = os.environ['LOGINSRV_JWT_SECRET']
 app = Flask(__name__)
 
 
-@app.route('/after', methods=['GET'])
+@app.route('/', methods=['GET'])
 def index():
     try:
         user = jwt.decode(
