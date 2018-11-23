@@ -18,7 +18,7 @@ def index():
         user = jwt.decode(
             request.cookies.get('jwt_token'),
             JWT_SECRET,
-            alg=JWT_ALGO,
+            algorithms=[JWT_ALGO],
         )
     except:
         return redirect('http://localhost/login', code=307)
