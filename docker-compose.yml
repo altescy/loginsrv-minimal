@@ -17,3 +17,10 @@ services:
     app:
         build: ./app
         env_file: .env
+        command:
+            - "sh"
+            - "-c"
+            - "pipenv sync && pipenv run gunicorn -w5 main:app -b :80 --access-logfile=-"
+        working_dir: /app
+        volumes:
+            - ./app:/app

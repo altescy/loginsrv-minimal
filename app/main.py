@@ -29,11 +29,3 @@ def index():
             <input type="submit" value="logout" />
         </form>
     '''.format(user['sub'])
-
-
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--host', default='0.0.0.0')
-    parser.add_argument('--port', default=80)
-    args = parser.parse_args()
-    app.run(host=args.host, port=args.port)
