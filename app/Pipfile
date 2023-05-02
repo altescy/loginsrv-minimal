@@ -7,7 +7,7 @@ verify_ssl = true
 
 [packages]
 PyJWT = "==1.4.2"
-Flask = "==1.0.2"
+Flask = "==2.2.5"
 gunicorn = "*"
 
 [requires]
